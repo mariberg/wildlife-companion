@@ -10,7 +10,7 @@
 
 ---
 
-<p align="center"> This project was created as part of the [Girls in Tech: Hack for the Environment](https://hackfortheenvironmentwith-git.devpost.com/).
+<p align="center"> This project was created as part of Girls in Tech: Hack for the Environment -Hackathon (https://hackfortheenvironmentwith-git.devpost.com/).
 
 </p>
 
@@ -27,7 +27,7 @@
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 The category we selected for our project is 'Endangered species. How might we use technology/AI to increase animal biodiversity?'
 
-There is an uneven distribution of funds for endangered animals - ‘ cute’ animals get more funding and some species are left out. For example, birds receive less funding than mammals. With this project, we want to create something that would secure more donations for endangered birds and in the future possibly other underfunded species.
+There is an uneven distribution of funds for endangered animals - ‘cute’ animals get more funding and some species are left out. For example, birds receive less funding than mammals. With this project, we want to create something that would secure more donations for endangered birds and in the future possibly other underfunded species.
  
 
 ## 💡 Idea / Solution <a name = "idea"></a>
@@ -40,7 +40,7 @@ The frontend of our prototype has been created with React. While currently desig
 
 The coordinates on the map are currently created randomly every time the user re-opens the map to give an idea of how the route the bird has flown during the last 24 hours would be shown. The chatbot is currently able to answer some of the most common questions the users could ask.
 
-The below diagram provides an overview of the architectural design of our prototype:
+The below diagram provides an overview of the architectural design for our prototype:
 
 TODO add diagram
 
@@ -70,20 +70,17 @@ and testing purposes.
 
 ### Prerequisites
 
-In need to install React:
+You need a AWS Lambda function with the code available in the AWS/Lambdas -folder. You also need to create an AWS API Gateway that is integrated with the Lambda function. The API endpoint url needs to be added in ``App.js``.
 
-```
-React commands:
-```
-
-Additionally, you need to create an AWS Lambda function with the code available in the AWS/Lambdas -folder. You also need to create an AWS API Gateway that is integrated with the Lambda and add the API endpoint url in the ***** component.
-
-You also need a chatbot created with Watson assistant that will be embedded in **** component. 
+You also need a chatbot created with Watson assistant that will be embedded in the ChatBot -component. 
 
 ### Installing
 
-#### Install project dependencies:
+Install project dependencies:
+
+```
 npm install
+```
 
 To run this project locally run:
 
