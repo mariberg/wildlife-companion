@@ -51,7 +51,7 @@ TODO add diagram
 
 As the design requires access to tracking information of the bird, this would be implemented by using an AI-powered tag. The proposed hardware design is described below:
 
-![hardware design](./assets/hardware_design.png)
+<a href="https://ibb.co/H71Nt5K"><img src="https://i.ibb.co/xhPm1x2/Doc1.png" alt="Hardware Design" border="0"></a>
 
 The communication flow would be following:
 
