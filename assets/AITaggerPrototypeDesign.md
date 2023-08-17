@@ -6,7 +6,7 @@ Material: Lightweight, durable, and animal-friendly materials
 
 Design:  Adjustable band having a small, lightweight module with a streamlined design to minimize the impact on the animal
 
-[hardware components](hardware_components.png)
+![hardware components](hardware_components.PNG)
 
 # Working
 
