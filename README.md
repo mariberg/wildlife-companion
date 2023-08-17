@@ -11,7 +11,7 @@
 ---
 
 <p align="center"> This project was created as part of the [Girls in Tech: Hack for the Environment](https://hackfortheenvironmentwith-git.devpost.com/).
-    <br> 
+
 </p>
 
 ## 📝 Table of Contents
@@ -49,9 +49,20 @@ The below architectural diagram provides an overview of the proposed system desi
 
 TODO add diagram
 
-As the design would require access to tracking information of the bird, this would be implemented by using an AI-powered tag. The proposed hardware design is described below:
+As the design requires access to tracking information of the bird, this would be implemented by using an AI-powered tag. The proposed hardware design is described below:
 
-TODO add hardware design
+![hardware design](./assets/hardware_design.png)
+
+The communication flow would be following:
+
+- The Arduino Uno reads data from the sensors.
+- The Arduino Uno processes the data and sends it to the ESP32 through serial communication.
+- The ESP32 packages the data into JSON format.
+- The ESP32 establishes a Wi-Fi connection and sends an HTTP POST request containing the data to the AWS Lambda function.
+- AWS Lambda function receives the HTTP POST request, processes the JSON data, and stores it in the Amazon DynamoDB.
+
+Further technical details are available in this [file](./assets/AITaggerPrototypeDesign.md).
+
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 These instructions will get you a copy of the project up and running on your local machine for development 
@@ -97,5 +108,7 @@ Add notes about how to use the system.
 - [Watson Assistant](https://www.ibm.com/products/watson-assistant/) - ChatBot
 
 ## ✍️ Authors <a name = "authors"></a>
-- [@mariberg](https://github.com/mariberg) - Architectural diagram....
-TODO - add the rest of the team
+- [@merylnadia](https://github.com/merylnadia) - UX design
+- [@MARYANNE67](https://github.com/MARYANNE67) - Frontend application
+- [@rashafathima](https://github.com/rashafathima) - Chatbot, hardware design
+- [@mariberg](https://github.com/mariberg) - AWS, architectural diagrams, documentation
