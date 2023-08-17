@@ -71,6 +71,9 @@ You also need a chatbot created with Watson assistant that will be embedded in *
 
 ### Installing
 
+#### Install project dependencies:
+npm install
+
 To run this project locally run:
 
 ```
