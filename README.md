@@ -42,12 +42,12 @@ The coordinates on the map are currently created randomly every time the user re
 
 The below diagram provides an overview of the architectural design for our prototype:
 
-TODO add diagram
+![prototype diagram](./assets/prototype.png)
 
 ## 🚀 Production architecture <a name = "future_scope"></a>
 The below architectural diagram provides an overview of the proposed system design for a production application, highlighting key components and interactions that ensure reliability and scalability. 
 
-TODO add diagram
+![architectural diagram](./assets/diagram.png)
 
 As the design requires access to tracking information of the bird, this would be implemented by using an AI-powered tag. The proposed hardware design is described below:
 
