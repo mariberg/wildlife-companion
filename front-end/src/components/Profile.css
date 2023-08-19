@@ -1,4 +1,4 @@
-/* Profile.css */
+Profile.css
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
@@ -30,7 +30,7 @@
     margin-top: 14px;
     padding: 5px 20px 5px;
     border-radius: 10px;
-    background-color: green;
+    background-color: #13b156;
     font-size: larger;
     color: white;
     border: none;
@@ -58,15 +58,6 @@
     flex: 0 1 calc(33.33% - 20px);
 }
 
-.year {
-    background-color: #ffd700;
-    /* Yellow */
-}
-
-.all-time {
-    background-color: #d3d3d3;
-    /* Light Gray */
-}
 
 .bronze {
     background-color: #cd7f32;
@@ -92,42 +83,153 @@
 
 .adoption-card img {
     width: 100%;
-    height: auto;
+    height: 50%;
 }
 
 .adoption-card h4 {
     margin: 10px 0;
+    font-size: 13px;
 }
 
-.adoption-card a {
-    color: blue;
-    text-decoration: underline;
+#status{
+    font-size: 0.7rem;
+    margin: 10px 0;
 }
 
-.conservation-rank-card {
+ .conservation-rank-card {
     width: 200px;
-    /* Adjust the width as needed */
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     margin-bottom: 10px;
-}
+} 
 
 
-.adoption-title {
-    font-weight: bold;
-    font-size: 24px;
-    /* Adjust the font size as needed */
-}
 
 .adoption-subtitle {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
-    /* Adjust the font size as needed */
 }
 
 .adoption-value-large {
     font-size: 28px;
-    /* Adjust the font size as needed */
     margin-top: 10px;
 }
+
+
+.main-title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+.profile-icon img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-icon img:hover {
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: 20px;
+}
+
+
+.edit-profile-button:hover {
+    background-color: #108f47;
+}
+
+
+.adoption-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.adoption-card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    flex: 0 1 calc(33.33% - 20px);
+}
+
+
+.year {
+    background-color: #13b156;
+    color: #fff;
+}
+
+.adoption-card img:hover {
+    transform: scale(1.05);
+}
+
+
+
+.adoption-card a {
+    color: #13b156;
+    text-decoration: none;
+    font-size: 0.6rem;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+.adoption-card a:hover {
+    color: #0033cc;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .profile-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-icon img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .edit-profile-button {
+        margin-top: 10px;
+        padding: 5px 15px;
+    }
+
+    .adoption-card {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    /* Added styles for adoption cards to display in a row */
+    .adoptions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .adoption-card {
+        width: calc(50% - 20px); /* 50% width with some margin */
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .adoption-card a{
+        font-size: 0.3rem;
+    }
+    
+    #status {
+        font-size: 0.5rem;
+    }
+}
+
