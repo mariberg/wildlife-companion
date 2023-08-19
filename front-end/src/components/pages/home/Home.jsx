@@ -1,9 +1,8 @@
 import React from 'react';
 import './Home.css';
-import { FeedData } from './data/FeedData';
+import { FeedData } from '../../data/FeedData';
 import Acitivity from './Activity';
-import { BorderOutlined } from '@ant-design/icons';
-
+import Adopt from '../adopt/Adopt';
 
 const Home = () => {
   return (
@@ -11,7 +10,9 @@ const Home = () => {
       <div className="col-1">
         <div className="header">
           <h1>Home</h1>
-          <button id="adopt-birds">Adopt</button>
+          <button id="adopt-birds" 
+          onClick={() => <Adopt/>}
+          >Adopt</button>
         </div>
         {FeedData.map((item, index) => (
           <>

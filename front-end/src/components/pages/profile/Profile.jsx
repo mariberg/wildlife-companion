@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import './Profile.css';
-import { FeedData } from './data/FeedData';
+import { FeedData } from '../../data/FeedData';
 import {SketchOutlined } from '@ant-design/icons';
 import { a } from 'react-spring';
 
