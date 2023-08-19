@@ -4,6 +4,7 @@
 }
 .navbar-container{
   border-right: 1px solid #f0f0f0;
+  width:200px;
 }
 .navbar-header{
   margin:40px;
@@ -13,7 +14,7 @@
 #logo{
 color: #161616;
 font-family: Inria Serif;
-font-size: 20px;
+font-size: 16px;
 font-style: normal;
 font-weight: 700;
 line-height: 100%; /* 24px */
@@ -33,9 +34,10 @@ letter-spacing: -1px;
 }
 
 @media (max-width: 750px) {
-  .navbar-container.active {
-    width: 100%; /* Expand the navbar to full width on small screens when active */
-  }
+  /* .navbar-header {
+    flex-direction: row;
+    justify-content: space-between;
+  } */
 
   .navbar-icons {
     display: flex;
@@ -46,8 +48,8 @@ letter-spacing: -1px;
 
   .menu-icon {
     display: block; /* Show the menu icon on small screens when active */
-    margin-right: 10px;
-    font-size: 24px; /* You can adjust the font size as needed */
+    font-weight: bold;
+    font-size: 20px; /* You can adjust the font size as needed */
     cursor: pointer;
   }
 
@@ -57,4 +59,18 @@ letter-spacing: -1px;
   }
 
   /* Other styling properties for small screens */
+}
+
+
+/* Add this CSS to your stylesheet or CSS file */
+.vertical-container {
+  width:35px;
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+.menu-icon {
+  margin-bottom: 10px; /* Add spacing between the menu icon and the company name */
 }
