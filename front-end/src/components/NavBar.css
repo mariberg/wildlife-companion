@@ -6,9 +6,19 @@
   border-right: 1px solid #f0f0f0;
 }
 .navbar-header{
-  margin:40px 40px ;
+  margin:40px;
+  font-family: Inria Serif;
 }
 
+#logo{
+color: #161616;
+font-family: Inria Serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 24px */
+letter-spacing: -1px;
+}
 
 .navbar-header {
   display: flex;
@@ -22,20 +32,29 @@
   cursor: pointer;
 }
 
-/* Styling for small screens (using media query) */
-@media (max-width: 500px) {
+@media (max-width: 750px) {
   .navbar-container.active {
     width: 100%; /* Expand the navbar to full width on small screens when active */
+  }
+
+  .navbar-icons {
+    display: flex;
+    justify-content: flex-end; /* Align the icons to the right */
+    align-items: center;
+    height: 100%;
   }
 
   .menu-icon {
     display: block; /* Show the menu icon on small screens when active */
     margin-right: 10px;
     font-size: 24px; /* You can adjust the font size as needed */
+    cursor: pointer;
+  }
+
+  /* Hide the text in the menu items */
+  .ant-menu-item-only-child > .anticon + span {
+    display: none;
   }
 
   /* Other styling properties for small screens */
 }
-
-/* Styling for active menu items */
-

@@ -1,16 +1,23 @@
-Profile.css
-* {
+/* Profile.css
+/* * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-}
+} */ 
 
 .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 20px;
-}
-
-.main-title {
-    font-weight: bold;
-}
+    max-width: 800px; /* Limit the maximum width to prevent it from becoming too wide */
+    margin: 0 auto; /* Center horizontally on the page */
+  }
+  
+  .main-title {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
 
 .profile-info {
     display: flex;
@@ -190,7 +197,7 @@ h2 {
 }
 
 /* Responsive Design */
-@media (max-width: 640px) {
+@media (max-width: 700px) {
     .profile-info {
         flex-direction: column;
         align-items: center;
