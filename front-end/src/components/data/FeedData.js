@@ -1,4 +1,5 @@
-import {birdData} from './Map'
+import {birdData} from './BirdData'
+
  const feedData=[
     {
         name:"Anna",
@@ -16,17 +17,17 @@ import {birdData} from './Map'
         // image: birdData[0].image,
         status:"Migrating"
     },{
-        name:"Betty",
+        name:"Kitty",
         title:"Riverside-Alert",
         time: "2 hour ago",
         // description:"Betty were near “Tranquil River”, likely searching for water and food resources.",
         // image: birdData[0].image,
         status:"Riverside"
     },{
-        name:"Anna",
+        name:"Amanda",
         title:"Forest Canopy",
         time: "a day ago",
-        description:"Anna were observed high in the canopy of “Whispering Woods”, potentially seeking safety from predators.",
+        // description:"Anna were observed high in the canopy of “Whispering Woods”, potentially seeking safety from predators.",
         image: birdData[1].image,
         status:"Forest"
     },{

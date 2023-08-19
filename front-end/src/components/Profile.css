@@ -1,7 +1,7 @@
-/* Profile.css
-/* * {
+ Profile.css
+ *{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-} */ 
+} 
 
 .profile-container {
     display: flex;
@@ -91,17 +91,15 @@
 .adoption-card img {
     width: 100%;
     height: 50%;
+    object-fit: contain;
 }
 
 .adoption-card h4 {
     margin: 10px 0;
-    font-size: 13px;
+    font-size: 15px;
 }
 
-#status{
-    font-size: 0.7rem;
-    margin: 10px 0;
-}
+
 
  .conservation-rank-card {
     width: 200px;
@@ -110,7 +108,6 @@
     text-align: center;
     margin-bottom: 10px;
 } 
-
 
 
 .adoption-subtitle {
@@ -181,6 +178,21 @@ h2 {
     transform: scale(1.05);
 }
 
+#status-icon:hover {
+    transform: scale(1.1);
+    
+}
+#status-icon:hover::after {
+    content: "Gold";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: gold;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
 
 
 .adoption-card a {
@@ -197,12 +209,7 @@ h2 {
 }
 
 /* Responsive Design */
-@media (max-width: 700px) {
-    .profile-info {
-        flex-direction: column;
-        align-items: center;
-    }
-
+@media (max-width: 750px) {
     .profile-icon img {
         width: 120px;
         height: 120px;
@@ -213,30 +220,18 @@ h2 {
         padding: 5px 15px;
     }
 
-    .adoption-card {
-        width: 100%;
-        margin-right: 0;
-    }
-    
-    /* Added styles for adoption cards to display in a row */
-    .adoptions {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
     
     .adoption-card {
-        width: calc(50% - 20px); /* 50% width with some margin */
+        width: calc(50% - 20px); /*50% width with some margin*/
         margin-right: 20px;
         margin-bottom: 20px;
     }
     .adoption-card a{
-        font-size: 0.3rem;
+        font-size: 0.5rem;
     }
     
     #status {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
 }
 
