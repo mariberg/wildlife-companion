@@ -106,6 +106,6 @@ Add notes about how to use the system.
 
 ## ✍️ Authors <a name = "authors"></a>
 - [@merylnadia](https://github.com/merylnadia) - UX design
-- [@MARYANNE67](https://github.com/MARYANNE67) - Frontend application
+- [@MARYANNE67](https://github.com/MARYANNE67) - Frontend  & Back-end of the application
 - [@rashafathima](https://github.com/rashafathima) - Chatbot, hardware design
 - [@mariberg](https://github.com/mariberg) - AWS, architectural diagrams, documentation

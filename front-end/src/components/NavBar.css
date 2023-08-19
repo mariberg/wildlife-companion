@@ -2,7 +2,39 @@
   background-color: #13b156 !important; /* Use !important to override Ant Design's default styles */
   color: white !important;
 }
-
+.navbar-container{
+  border-right: 1px solid #f0f0f0;
+}
 .navbar-header{
   margin:40px 40px ;
 }
+
+
+.navbar-header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none; /* Hide the menu icon by default on desktop view */
+  cursor: pointer;
+}
+
+/* Styling for small screens (using media query) */
+@media (max-width: 500px) {
+  .navbar-container.active {
+    width: 100%; /* Expand the navbar to full width on small screens when active */
+  }
+
+  .menu-icon {
+    display: block; /* Show the menu icon on small screens when active */
+    margin-right: 10px;
+    font-size: 24px; /* You can adjust the font size as needed */
+  }
+
+  /* Other styling properties for small screens */
+}
+
+/* Styling for active menu items */
+

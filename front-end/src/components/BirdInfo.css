@@ -1,5 +1,4 @@
 
-
    .bird-info-panel {
     position: absolute;
     top: 20px;
@@ -32,7 +31,7 @@
 
   .bird-info-content img {
     width: 100%;
-    height: auto;
+    height: 150px;
     max-height: calc(50% - 1px); /* Subtract 1px to account for the border */
     object-fit: cover; /* Fit image without stretching */
   }
