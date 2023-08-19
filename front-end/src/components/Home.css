@@ -140,10 +140,9 @@ line-height: normal;
   line-height: 1.5;
   margin: 0;
 }
-.activity-feed a{
+ a{
 text-decoration: none;
 color: #13B156;
-/* font-family: Inter; */
 font-size: 16px;
 font-style: normal;
 font-weight: 700;
