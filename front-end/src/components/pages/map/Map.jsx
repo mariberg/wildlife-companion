@@ -6,7 +6,7 @@ import 'leaflet/dist/leaflet.css';
 import BirdInfoPanel from './BirdInfoPanel';
 import './MapCards.css';
 import { useSpring, animated } from 'react-spring';
-import  {birdData}  from './data/BirdData';
+import  {birdData}  from '../../data/BirdData';
 
 // import Icon from '@ant-design/icons/lib/components/Icon';
  

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRightOutlined } from '@ant-design/icons';
-import { FeedData } from './data/FeedData';
+import { FeedData } from '../../data/FeedData';
 
 const Activity = () => {
   return (
