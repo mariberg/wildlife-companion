@@ -35,34 +35,39 @@ body{
 
 .header button {
   display: inline-flex;
-  padding: 9px 30px 9px 30px;
+  padding: 9px 20px 9px 20px;
   justify-content: center;
   align-items: center; 
   border-radius: 52px;
   background: #13b156;
-  font-size: 18px; /* Default font size */
+  font-size: 10px; /* Default font size */
   transition: font-size 0.3s ease; /* Add a transition effect */
 }
 
 /* Add media queries to adjust font sizes for smaller screens */
 @media (max-width: 400px) {
+  .header{
+    display: flex;
+    justify-content: space-between;
+  }
   .header h1 {
-    font-size: 24px; /* Adjust the font size for smaller screens */
+    font-size: 11px;
+ /* Adjust the font size for smaller screens */
   }
 
   .header button {
-    font-size: 16px;
+    font-size: 10px;
      /* Adjust the font size for smaller screens */
   }
 }
 
-  .col-1 {
-    flex: 75%;
-    height: 100vh;
-    padding: 10px;
-    background-color: white;
-    border-right: 1px solid #f0f0f0;
-  }
+.col-1 {
+  flex: 75%;
+  height: 100vh;
+  padding: 10px;
+  background-color: white;
+  border-right: 1px solid #f0f0f0;
+}
   .col-2 {
     flex: 25%;
     height: 100vh;
