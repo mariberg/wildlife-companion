@@ -1,0 +1,133 @@
+/* Profile.css */
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profile-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-title {
+    font-weight: bold;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-icon img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.edit-profile-button {
+    margin-top: 14px;
+    padding: 5px 20px 5px;
+    border-radius: 10px;
+    background-color: green;
+    font-size: larger;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.adoption-summary {
+    margin-top: 30px;
+}
+
+.adoption-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.adoption-card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    flex: 0 1 calc(33.33% - 20px);
+}
+
+.year {
+    background-color: #ffd700;
+    /* Yellow */
+}
+
+.all-time {
+    background-color: #d3d3d3;
+    /* Light Gray */
+}
+
+.bronze {
+    background-color: #cd7f32;
+    /* Bronze */
+}
+
+.silver {
+    background-color: #c0c0c0;
+    /* Silver */
+}
+
+.gold {
+    background-color: #ffd700;
+    /* Gold */
+}
+
+.adoptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.adoption-card img {
+    width: 100%;
+    height: auto;
+}
+
+.adoption-card h4 {
+    margin: 10px 0;
+}
+
+.adoption-card a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.conservation-rank-card {
+    width: 200px;
+    /* Adjust the width as needed */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.adoption-title {
+    font-weight: bold;
+    font-size: 24px;
+    /* Adjust the font size as needed */
+}
+
+.adoption-subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    /* Adjust the font size as needed */
+}
+
+.adoption-value-large {
+    font-size: 28px;
+    /* Adjust the font size as needed */
+    margin-top: 10px;
+}

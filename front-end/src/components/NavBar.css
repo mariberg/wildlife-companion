@@ -12,6 +12,7 @@
 
 .navbar-header {
   display: flex;
+  font-size: x-large;
   flex-direction: row-reverse;
   align-items: center;
 }
