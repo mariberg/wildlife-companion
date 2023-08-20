@@ -1,38 +1,35 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react'; // Import 'useState' and 'useEffect'
-import ChatBot from './components/ChatBot';
-import NavBar from './components/NavBar';
-import Map from './components/Map';
-import Home from './components/Home';
+import { useState, useEffect } from 'react';
+import ChatBot from './components/chatbot/ChatBot';
+import NavBar from './components/navbar/NavBar';
+import BirdMap from './components/pages/map/Map';
+import Home from './components/pages/home/Home';
+import Profile from './components/pages/profile/Profile';
+
 
 const App = () => {
-  const [birdCoordinates, setBirdCoordinates] = useState([]);
+  const [coordinates, setCoordinates] = useState([]);
 
-
-// TO-DO: Fetch bird coordinates from the lamda function
   useEffect(() => {
-    var hardCodedCoordinates = [
-      { latitude: 27.069580867783454, longitude: 66.9296330248051 },
-      { latitude: 28.119724666488132, longitude: 66.97977819035029 },
-      { latitude: 27.143845747618183, longitude: 67.04312546945734 },
-      { latitude: 37.208083920780947, longitude: 57.11214889143658 },
-      { latitude: 27.299128946015312, longitude: 67.18777779297999 }
-    ];
-
-    setBirdCoordinates(hardCodedCoordinates);
-  }, [birdCoordinates]);
-
+    // Fetch coordinates from API
+    fetch('https://qnildvwtq7.execute-api.eu-west-2.amazonaws.com/dev')
+      .then(response => response.json())
+      .then(data => {
+        setCoordinates(data);
+      })
+      .catch(error => console.error('Error fetching coordinates:', error));
+  }, []);
+  
   return (
-    <div className="App">
-      <Router>
+    <div className="App" style={{display:'flex', flexDirection:"row"}}>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/map" element={<Map coordinates={birdCoordinates} />} />
+          <Route path="/map" element={<BirdMap />} />
           <Route path="/chatbot" element={<ChatBot />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
-      </Router>
     </div>
   );
 };

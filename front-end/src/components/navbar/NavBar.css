@@ -1,0 +1,76 @@
+.active-menu-item {
+  background-color: #13b156 !important; /* Use !important to override Ant Design's default styles */
+  color: white !important;
+}
+.navbar-container{
+  border-right: 1px solid #f0f0f0;
+  width:200px;
+}
+.navbar-header{
+  margin:40px;
+  font-family: Inria Serif;
+}
+
+#logo{
+color: #161616;
+font-family: Inria Serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 24px */
+letter-spacing: -1px;
+}
+
+.navbar-header {
+  display: flex;
+  font-size: x-large;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none; /* Hide the menu icon by default on desktop view */
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  /* .navbar-header {
+    flex-direction: row;
+    justify-content: space-between;
+  } */
+
+  .navbar-icons {
+    display: flex;
+    justify-content: flex-end; /* Align the icons to the right */
+    align-items: center;
+    height: 100%;
+  }
+
+  .menu-icon {
+    display: block; /* Show the menu icon on small screens when active */
+    font-weight: bold;
+    font-size: 20px; /* You can adjust the font size as needed */
+    cursor: pointer;
+  }
+
+  /* Hide the text in the menu items */
+  .ant-menu-item-only-child > .anticon + span {
+    display: none;
+  }
+
+  /* Other styling properties for small screens */
+}
+
+
+/* Add this CSS to your stylesheet or CSS file */
+.vertical-container {
+  width:35px;
+  display: flex;
+  flex-direction: column;
+  gap: 300px;
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+.menu-icon {
+  margin-bottom: 10px; /* Add spacing between the menu icon and the company name */
+}

@@ -3,10 +3,10 @@
 export const handler = async (event) => {
     try {
         // Specify the latitude and longitude range
-        const minLatitude = 25.80; // Minimum latitude
+         const minLatitude = 25.80; // Minimum latitude
         const maxLatitude = 27.20; // Maximum latitude
         const minLongitude = 54.30; // Minimum longitude
-        const maxLongitude = 74.30; // Maximum longitude
+     const maxLongitude = 74.30; // Maximum longitude
         
         // Initialize an array to store the coordinates
         const coordinates = [];
