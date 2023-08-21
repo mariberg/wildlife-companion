@@ -10,6 +10,7 @@
     "antd": "^5.8.3",
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
+    "cors": "^2.8.5",
     "firebase": "^10.2.0",
     "ibm-watson": "^8.0.0",
     "leaflet": "^1.9.4",
