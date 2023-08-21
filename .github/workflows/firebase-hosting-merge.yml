@@ -14,10 +14,14 @@ jobs:
           cd front-end
           pwd
       
-      - name: Install Dependencies and Build
-        run: |
-          npm ci
-          npm run build
+      - name: Install Dependencies
+        run: 
+          /usr/local/bin/npm ci
+
+      - name: Build
+        run:
+          /usr/local/bin/npm run build
+
           
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
