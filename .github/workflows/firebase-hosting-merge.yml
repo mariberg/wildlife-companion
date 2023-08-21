@@ -1,5 +1,5 @@
 name: Deploy to Firebase Hosting on merge
-on:
+'on':
   push:
     branches:
       - frontend-updates
@@ -8,26 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
+      
       - name: Navigate to 'front-end' directory
         run: cd front-end
-
-      - name: Debug Directory Contents
+      
+      - name: Install Dependencies and Build
         run: |
-          ls -la
-          npm --version
+          npm ci
+          npm run build
           
-      # - name: Install Dependencies
-      #   run: npm build 
-
-      - name: Build
-        run: npm run build
-
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_WILDLIFE_CAMPANION }}'
           channelId: live
           projectId: wildlife-campanion
-
 
