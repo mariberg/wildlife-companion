@@ -94,8 +94,6 @@ This command will build the project and start a local development server. You'll
 
 Access the Application: Open a web browser and navigate to http://localhost:3000. This is the default address where the React application will be served. You should see your React app running locally.
 
-## 🎈 Usage <a name="usage"></a>
-Add notes about how to use the system.
 
 ## ⛏️ Built With <a name = "tech_stack"></a>
 - [React](https://www.react.dev/) - Frontend Framework
