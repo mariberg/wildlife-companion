@@ -9,17 +9,9 @@ import Profile from './components/pages/profile/Profile';
 
 
 const App = () => {
-  const [coordinates, setCoordinates] = useState([]);
+ 
 
-  useEffect(() => {
-    // Fetch coordinates from API
-    fetch('https://qnildvwtq7.execute-api.eu-west-2.amazonaws.com/dev')
-      .then(response => response.json())
-      .then(data => {
-        setCoordinates(data);
-      })
-      .catch(error => console.error('Error fetching coordinates:', error));
-  }, []);
+
   
   return (
     <div className="App" style={{display:'flex', flexDirection:"row"}}>
