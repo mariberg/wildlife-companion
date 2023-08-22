@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { MapContainer, TileLayer, Circle, Popup, Marker } from 'react-leaflet';
@@ -57,39 +59,26 @@ const BirdMap = () => {
     return null; // Or display loading message
   }
 
+  const combinedBirds = birdData.map((coordinate, index) => ({
+    ...coordinate,
+    ...birdCoordinates[index], 
+  }));
+
+
   // Calculate the average center
   const center = [centerPoint.lat / birdCoordinates.length, centerPoint.lng / birdCoordinates.length];
 
   return (
     <div className="bird-map-container">
-      <MapContainer center={center} zoom={8} style={{ height: '100%' }}>
+      <MapContainer center={center} zoom={7} style={{ height: '100%' }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {birdCoordinates.map((bird, index) => (
-          <Circle
-            key={index}
-            center={[bird.latitude, bird.longitude]}
-            pathOptions={{
-              color: 'red',
-              fillColor: index === birdCoordinates.length - 1 ? '#f00' : '#f03',
-              fillOpacity: 0.5,
-            }}
-            radius={index === birdCoordinates.length - 1 ? 1500 : 500}
-          >
-            <Popup>
-              <div className="popup-content">
-                <h4>Location {index + 1}</h4>
-                {/* Add more information as needed */}
-              </div>
-            </Popup>
-          </Circle>
-        ))}
-        {birdData.map(bird => (
+       {combinedBirds.map((bird) => (
           <Marker
             key={bird.id}
-            position={[bird.lat, bird.lng]}
+            position={[bird.latitude, bird.longitude]}
             icon={L.divIcon({
               className: 'bird-marker',
               html: `<div class="bird-image"><img src="${bird.image}" alt="${bird.name}" /></div>`,
@@ -101,11 +90,13 @@ const BirdMap = () => {
               <div className="popup-content">
                 <h4>{bird.name}</h4>
                 <p>{bird.scientificName}</p>
+                <p>{bird.latitude.toFixed(2)}, {bird.longitude.toFixed(2)}</p>
               </div>
             </Popup>
           </Marker>
         ))}
       </MapContainer>
+
       <div className="bird-cards">
         <div className="slider-container">
           <animated.div className="cards-slider" style={{ transform: slideProps.transform }}>
@@ -135,7 +126,3 @@ const BirdMap = () => {
 };
 
 export default BirdMap;
-
-
-
-

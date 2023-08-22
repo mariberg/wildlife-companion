@@ -104,6 +104,6 @@ Access the Application: Open a web browser and navigate to http://localhost:3000
 
 ## ✍️ Authors <a name = "authors"></a>
 - [@merylnadia](https://github.com/merylnadia) - UX design
-- [@MARYANNE67](https://github.com/MARYANNE67) - Frontend  & Firebase database
+- [@MARYANNE67](https://github.com/MARYANNE67) - Frontend and Data Integration
 - [@rashafathima](https://github.com/rashafathima) - Chatbot, hardware design
 - [@mariberg](https://github.com/mariberg) - AWS, architectural diagrams, documentation
