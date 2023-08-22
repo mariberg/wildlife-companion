@@ -88,7 +88,8 @@ const NavBar = () => {
             >
               Profile
             </Menu.Item>
-            <Menu.Item key="signout" icon={<PoweroffOutlined />} danger>
+            <Menu.Item key="/notify" icon={<PoweroffOutlined />} danger
+             className={location.pathname === '/notify' ? 'active-menu-item' : ''}>
               Logout
             </Menu.Item>
           </Menu>
@@ -123,7 +124,8 @@ const NavBar = () => {
               <Menu.Item key="/profile" icon={<UserOutlined />}
                className={location.pathname === '/profile' ? 'active-menu-item' : ''}>
               </Menu.Item>
-              <Menu.Item key="signout" icon={<PoweroffOutlined />} danger>
+              <Menu.Item key="/notify" icon={<PoweroffOutlined />} danger
+              className={location.pathname === '/notify' ? 'active-menu-item' : ''}>
               </Menu.Item>
             </Menu>
           )}

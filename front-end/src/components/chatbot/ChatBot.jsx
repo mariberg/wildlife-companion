@@ -1,6 +1,11 @@
 import React,{ useEffect } from 'react';
 import { ArrowDownOutlined } from '@ant-design/icons';
+
+
+
 const ChatBot = () => {
+
+
        useEffect(()=>{
         window.watsonAssistantChatOptions = {
             integrationID: "4bf83202-dd86-46fb-993e-8cb723191b56", // The ID of this integration.
@@ -13,9 +18,12 @@ const ChatBot = () => {
         document.head.appendChild(t);
 
        }, [])
+   
+    
 
        return (
               <div id="ibm-chatbot-container" style={{ position: "absolute", bottom: "80px", right: "30px", textAlign: "right" }}>
+           
               <h1 style={{ color: "#20601F" }}>CHAT WITH OUR BOT TO LEARN MORE <ArrowDownOutlined /></h1>
           </div>
           
