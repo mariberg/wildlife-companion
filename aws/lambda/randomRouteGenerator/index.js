@@ -1,21 +1,18 @@
-//This code generates a 'route' of five different coordinates that the birds have flown within the last 24 hours
+//This code generates a mock 'route' of five different coordinates that the birds have flown within the last 24 hours
 
-export const handler = async (event) => {
+exports.handler = async (event) => {
     try {
         // Specify the latitude and longitude range
-         const minLatitude = 25.80; // Minimum latitude
+        const minLatitude = 25.80; // Minimum latitude
         const maxLatitude = 27.20; // Maximum latitude
         const minLongitude = 54.30; // Minimum longitude
-     const maxLongitude = 74.30; // Maximum longitude
+        const maxLongitude = 74.30; // Maximum longitude
         
-        // Initialize an array to store the coordinates
         const coordinates = [];
         
-        // Generate the first random coordinates within the specified range
         const randomLatitude = Math.random() * (maxLatitude - minLatitude) + minLatitude;
         const randomLongitude = Math.random() * (maxLongitude - minLongitude) + minLongitude;
         
-        // Push the first random coordinate to the array
         coordinates.push({ latitude: randomLatitude, longitude: randomLongitude });
         
         // Generate and push the next 4 coordinates
@@ -31,21 +28,23 @@ export const handler = async (event) => {
             
             coordinates.push({ latitude: newLatitude, longitude: newLongitude });
         }
-        
-        // Return the array of coordinates
-        const response = {
+
+           const response = {
             statusCode: 200,
+            headers: {
+                "Access-Control-Allow-Origin": "https://wildlife-campanion.web.app",
+                "Access-Control-Allow-Headers": "Content-Type",
+                "Access-Control-Allow-Methods": "GET, OPTIONS"
+            },
             body: JSON.stringify(coordinates)
         };
-        
-        return response;
+
+        return response; 
     } catch (error) {
-        // Handle errors
-        const response = {
+        console.error("An error occurred:", error);
+        return {
             statusCode: 500,
-            body: JSON.stringify({ error: "Internal Server Error" })
+            body: JSON.stringify({ message: "Internal Server Error" })
         };
-        
-        return response;
     }
 };
