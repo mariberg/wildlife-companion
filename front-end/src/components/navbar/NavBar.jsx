@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import {
   HomeOutlined,
   GlobalOutlined,
+  WechatOutlined,
   BellOutlined,
   UserOutlined,
   PoweroffOutlined,
@@ -75,10 +76,10 @@ const NavBar = () => {
             </Menu.Item>
             <Menu.Item
               key="/chatbot"
-              icon={<BellOutlined />}
+              icon={<WechatOutlined />}
               className={location.pathname === '/chatbot' ? 'active-menu-item' : ''}
             >
-              Notifications
+              Chatbot
             </Menu.Item>
             <Menu.Item
               key="/profile"
@@ -116,7 +117,7 @@ const NavBar = () => {
               <Menu.Item key="/map" icon={<GlobalOutlined />}
                  className={location.pathname === '/map' ? 'active-menu-item' : ''}>     
               </Menu.Item>
-              <Menu.Item key="/chatbot" icon={<BellOutlined />}
+              <Menu.Item key="/chatbot" icon={<WechatOutlined />}
                className={location.pathname === '/chatbot' ? 'active-menu-item' : ''}>
               </Menu.Item>
               <Menu.Item key="/profile" icon={<UserOutlined />}

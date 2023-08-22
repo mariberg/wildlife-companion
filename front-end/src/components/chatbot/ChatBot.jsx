@@ -1,5 +1,5 @@
 import React,{ useEffect } from 'react';
-
+import { ArrowDownOutlined } from '@ant-design/icons';
 const ChatBot = () => {
        useEffect(()=>{
         window.watsonAssistantChatOptions = {
@@ -15,9 +15,11 @@ const ChatBot = () => {
        }, [])
 
        return (
-              <div id="ibm-chatbot-container">
-
-              </div>
+              <div id="ibm-chatbot-container" style={{ position: "absolute", bottom: "80px", right: "30px", textAlign: "right" }}>
+              <h1 style={{ color: "#20601F" }}>CHAT WITH OUR BOT TO LEARN MORE <ArrowDownOutlined /></h1>
+          </div>
+          
+          
        )
 }
 
